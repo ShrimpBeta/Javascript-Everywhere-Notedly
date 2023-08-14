@@ -4,7 +4,7 @@ const md5 = require('md5');
 
 const gravatar = email => {
   const hash = md5(email);
-  return `https://gravatar.loli.net/avatar/${hash}.jpg?d=identicon`;
+  return `https://www.gravatar.com/avatar/${hash}.jpg?d=identicon`;
 };
 
 module.exports = gravatar;

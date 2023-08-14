@@ -25,26 +25,26 @@ margin-left: auto;
 `;
 
 const Note = ({ note }) => {
-    return (
-        <StyledNote>
-            <MetaData>
-                <MetaInfo>
-                    <img
-                        src={note.author.avatar}
-                        alt={`${note.author.username} avatar`}
-                        height="50px" />
-                </MetaInfo>
-                <MetaInfo>
-                    <em>by</em> {note.author.username} <br />
-                    {format(note.createdAt, 'MMM Do YYYY')}
-                </MetaInfo>
-                <UserActions>
-                    <em>Favorites:</em> {note.favoriteCount}
-                </UserActions>
-            </MetaData>
-            <ReactMarkdown source={note.content} remarkPlugins={[remarkGfm]}></ReactMarkdown>
-        </StyledNote>
-    );
+   return (
+      <StyledNote>
+         <MetaData>
+            <MetaInfo>
+               <img
+                  src={note.author.avatar}
+                  alt={`${note.author.username} avatar`}
+                  height="50px" />
+            </MetaInfo>
+            <MetaInfo>
+               <em>by</em> {note.author.username} <br />
+               {format(note.createdAt, 'MMM Do YYYY')}
+            </MetaInfo>
+            <UserActions>
+               <em>Favorites:</em> {note.favoriteCount}
+            </UserActions>
+         </MetaData>
+         <ReactMarkdown source={note.content} remarkPlugins={[remarkGfm]}></ReactMarkdown>
+      </StyledNote>
+   );
 };
 
 export default Note;
