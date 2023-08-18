@@ -64,9 +64,10 @@ module.exports = {
 
         try {
             // if everything checks out, remove the note
-            await note.remove();
+            await note.deleteOne();
             return true;
         } catch (err) {
+            console.log(err);
             return false;
         }
     },
